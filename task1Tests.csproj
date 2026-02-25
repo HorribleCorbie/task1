@@ -54,7 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\task1\task1.csproj">
+    <ProjectReference Include="task1.csproj">
       <Project>{8806A797-9906-4396-9659-3A3D4809A4A2}</Project>
       <Name>task1</Name>
     </ProjectReference>

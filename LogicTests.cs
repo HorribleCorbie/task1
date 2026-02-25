@@ -12,7 +12,7 @@ namespace task1.Tests
     public class LogicTests
     {
         [TestMethod()]
-        public void MessageTest()
+        public void EqualTest1()
         {
             int a = 1, b = 2, c = 3;
             string message = Logic.Task(a, b, c);
@@ -26,7 +26,7 @@ namespace task1.Tests
             Assert.Fail("Числа не разные.", message);
         }
         [TestMethod()]
-        public void ErrorTest2()
+        public void EqualTest2()
         {
             int a = 3, b = 2, c = 1;
             string message = Logic.Task(a, b, c);
@@ -34,7 +34,7 @@ namespace task1.Tests
         }
 
         [TestMethod()]
-        public void ErrorTest3()
+        public void EqualTest3()
         {
             int a = 1, b = 3, c = 2;
             string message = Logic.Task(a, b, c);

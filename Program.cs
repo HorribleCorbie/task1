@@ -16,20 +16,18 @@ namespace task1
 
         public static string Task(int a, int b, int c)
         {
-            string message = ""; 
-            if (Logic.Equal(a, b, c))
+            string message = "";
+            if (!(a == b || b == c || c == a))
             {
                 message = Logic.Message(a, b, c);
             }
-            else message = "Числа не разные.";
+            else
+            {
+                message = "Числа не разные.";
+            }
             return message;
         }
 
-        public static bool Equal(int a, int b, int c)
-        {
-            if (a == b || b == c || c == a) return false;
-            else return true;
-        }
         public static string Message(int a, int b, int c )
         {
             int max1 = Math.Max(a, Math.Max(b, c));
@@ -37,45 +35,39 @@ namespace task1
             string message = "";
             if (max1 == a)
             {
-                message = "Самое большое первое число:" + a +". ";
+                message = $"Самое большое первое число:{a}. ";
                 if (min1 == b)
                 {
-                    message+="Самое минимальное второе число:"+ b +". ";
-                    message += "Среднее число:" +c;
+                    message+= $"Самое минимальное второе число:{b}. Среднее число:{c}";
                 }
                 else
                 {
-                    message += "Самое минимальное третье число:" + c + ". ";
-                    message += "Среднее число:" + b;
+                    message += $"Самое минимальное третье число:{c}. Среднее число:{b}";
                 }
             }
             else if (max1 == b)
             {
-                message = "Самое большое второе число:" + b + ". ";
+                message = $"Самое большое второе число:{b}. ";
                 if (min1 == a)
                 {
-                    message += "Самое минимальное первое число:" + a + ". ";
-                    message += "Среднее число:" + c;
+                    message += $"Самое минимальное первое число:{a}. Среднее число:{c}";
                 }
                 else
                 {
-                    message += "Самое минимальное третье число:" + c + ". ";
-                    message += "Среднее число:" + a;
+                    message += $"Самое минимальное третье число:{c}. Среднее число:{a}";
                 }
 
             }
             else
             {
-                message = "Самое большое третье число:" + c + ". ";
+                message = $"Самое большое третье число:{c}. ";
                 if (min1 == a)
                 {
-                    message += "Самое минимальное первое число:" + a + ". ";
-                    message += "Среднее число:" + b;
+                    message += $"Самое минимальное первое число:{a}. Среднее число:{b}";
                 }
                 else
                 {
-                    message += "Самое минимальное второе число:" + b + ". ";
-                    message += "Среднее число:" + a;
+                    message += $"Самое минимальное второе число:{b}. Среднее число:{a}";
                 }
             }
             return message;
